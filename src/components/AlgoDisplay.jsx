@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { sortingAlgorithms } from "../common/config";
 import { useControls, useData } from "../common/store";
@@ -46,16 +46,48 @@ export function AlgoDisplay() {
     shallow
   );
 
+  const [inputError, setInputError] = useState(false);
+
   useEffect(() => {
     resetSorting();
   }, [algorithm]);
 
-  if (sortingArray.length === 0)
+// ...
+
+// ...
+
+// ...
+
+const handleInputChange = (event) => {
+  const inputValue = event.target.value;
+  const inputValues = inputValue.split(",").map((value) => value.trim());
+
+  if (inputValues.every((value) => /^[a-zA-Z0-9]+$/.test(value))) {
+    // Only alphanumeric characters are allowed
+    setInputError(false);
+    // Update the input array
+    // ... Your code to update the input array goes here ...
+  } else {
+    // Display error message for invalid input
+    setInputError(true);
+  }
+};
+
+// ...
+
+// ...
+
+
+// ...
+
+
+  if (sortingArray.length === 0) {
     return (
       <h3 style={flexCenter}>
         Please enter input array or use generate button
       </h3>
     );
+  }
 
   return (
     <div style={flexCenter}>
@@ -69,6 +101,9 @@ export function AlgoDisplay() {
         </TabPanel>
       ))}
       <TabPanel value={algorithm} index={sortingAlgorithms.length}>
+        {inputError && (
+          <h3 style={flexCenter}>Please enter only integers</h3>
+        )}
         <FlexWrap>
           {sortingAlgorithms.map((algoInfo) => (
             <SortManager

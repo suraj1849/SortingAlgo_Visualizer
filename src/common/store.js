@@ -7,11 +7,11 @@ import {
   sortingAlgorithms,
 } from "./config";
 
-export const useControls = create(
+export const useControls = create( //hook
   devtools((set) => ({
-    progress: "reset",
-    speed: 3,
-    compareTime: compareTime,
+    progress: "reset",//state1
+    speed: 3,//state2
+    compareTime: compareTime,//state3
     swapTime: swapTime,
     doneCount: 0,
 

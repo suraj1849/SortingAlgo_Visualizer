@@ -1,6 +1,6 @@
 export function convertInputToArrayString(string) {
   string = string.replaceAll(/\s/g, "");
-  string = string.replaceAll(/\d{4}/g, "");
+  string = string.replaceAll(/\d{10}/g, "");
   string = string.replaceAll(/\s\s/g, " ");
   string = string.replaceAll(/\s,/g, ",");
   string = string.replaceAll(/,,/g, ",");
@@ -10,9 +10,9 @@ export function convertInputToArrayString(string) {
 
 export function convertArrayStringToArray(string) {
   return string
-    .split(",")
-    .filter((v) => v !== "")
-    .map((v) => +v);
+    .split(",")//split every int
+    .filter((v) => v !== "")//remove empty string
+    .map((v) => +v); //iterate all elements to add in array
 }
 
 export function getRandomArray(length = generateRandomNumberInRange(5, 30)) {

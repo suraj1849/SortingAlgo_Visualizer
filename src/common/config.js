@@ -13,6 +13,14 @@ export const sortedColor = "springgreen";
 export const pivotColor = "sandybrown";
 
 // time setting
+// vite.config.js
+export default {
+  // other configuration options...
+  server: {
+    open: true
+  }
+}
+
 export let swapTime = 1000;
 export let compareTime = 500;
 
@@ -20,12 +28,12 @@ export let compareTime = 500;
 export let sortingArray = initArrayForScreenSize();
 
 export const sortingAlgorithms = [
-  { component: BubbleSort, title: "Bubble", name: "BubbleSort" },
-  { component: SelectionSort, title: "Selection", name: "SelectionSort" },
-  { component: InsertionSort, title: "Insertion", name: "InsertionSort" },
-  { component: HeapSort, title: "Heap", name: "HeapSort" },
-  { component: MergeSort, title: "Merge", name: "MergeSort" },
-  { component: QuickSort, title: "Quick", name: "QuickSort" },
+  { component: BubbleSort, title: "Bubble", name: "Bubble_Sort" },
+  { component: SelectionSort, title: "Selection", name: "Selection_Sort" },
+  { component: InsertionSort, title: "Insertion", name: "Insertion_Sort" },
+  { component: HeapSort, title: "Heap", name: "Heap_Sort" },
+  { component: MergeSort, title: "Merge", name: "Merge_Sort" },
+  { component: QuickSort, title: "Quick", name: "Quick_Sort" },
 ];
 
 function initArrayForScreenSize() {
