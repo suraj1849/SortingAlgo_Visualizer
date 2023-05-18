@@ -1,6 +1,6 @@
 {
   "name": "front-end-made-easy",
-  "homepage": "https://github.com/suraj1849/SortingAlgo_Visualizer/blob/master/dist",
+  "homepage": "https://github.com/suraj1849/SortingAlgo_Visualizer/dist",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --open",
