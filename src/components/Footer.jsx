@@ -37,6 +37,7 @@ export function Footer() {
         <TeamListItem>Piyush Shah</TeamListItem>
         <TeamListItem>Shreya Sandhashive</TeamListItem>
         <TeamListItem>Khushi Raval</TeamListItem>
+        <TeamListItem>Dhruv Saini</TeamListItem>
       </TeamList>
     </FooterDiv>
   );
