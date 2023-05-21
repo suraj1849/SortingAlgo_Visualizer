@@ -1,7 +1,12 @@
 {
   "name": "front-end-made-easy",
+<<<<<<< HEAD
+  "homepage": "https://github.com/suraj1849/SortingAlgo_Visualizer",
+  "version": "0.1.0",
+=======
   "homepage": "https://github.com/suraj1849/SortingAlgo_Visualizer/dist",
   "version": "0.0.0",
+>>>>>>> origin/master
   "scripts": {
     "dev": "vite --open",
     "predeploy": "npm run build",
